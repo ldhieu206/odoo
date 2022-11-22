@@ -1,0 +1,3 @@
+{
+    'name': 'Kang Vendor Portal',
+}
