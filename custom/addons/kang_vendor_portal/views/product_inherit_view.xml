@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_template_form_view" model="ir.ui.view">
+        <field name="name">product.template.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <!--thêm các trường mới vào form-->
+            <xpath expr="//field[@name='name']" position="after">
+                <label for="vendor_code" string="Vendor Code"/>
+                <field name="vendor_code"/>
+            </xpath>
+            <xpath expr="//field[@name='detailed_type']" position="after">
+                <field name="deadline"/>
+                <field name="capacity"/>
+                <field name="qty_per_box"/>
+                <field name="weight"/>
+                <field name="length"/>
+                <field name="width"/>
+                <field name="height"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
